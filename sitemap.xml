@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vguillemot.github.io/colorofmusic/colorofmusic.html</loc>
-    <lastmod>2024-06-27T08:55:13.605Z</lastmod>
+    <loc>https://vguillemot.github.io/colorofmusic/ca.html</loc>
+    <lastmod>2024-06-27T13:02:25.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/colorofmusic/about.html</loc>
+    <lastmod>2024-06-27T08:55:13.491Z</lastmod>
   </url>
   <url>
     <loc>https://vguillemot.github.io/colorofmusic/index.html</loc>
     <lastmod>2024-06-27T08:55:13.505Z</lastmod>
   </url>
   <url>
-    <loc>https://vguillemot.github.io/colorofmusic/about.html</loc>
-    <lastmod>2024-06-27T08:55:13.491Z</lastmod>
+    <loc>https://vguillemot.github.io/colorofmusic/colorofmusic.html</loc>
+    <lastmod>2024-06-27T12:51:53.695Z</lastmod>
   </url>
 </urlset>
