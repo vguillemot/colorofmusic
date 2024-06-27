@@ -23,8 +23,7 @@ library(reshape2)
 # R functions
 ```
 
-# {.tabset}
-
+#  {.tabset}
 
 ```{r data}
 data("colorOfMusic", package = "data4PCCAR")
@@ -32,7 +31,6 @@ tab <- colorOfMusic$contingencyTable
 ```
 
 ## Colors
-
 
 ```{r colors}
 swatch(setNames(colorOfMusic$colorInformation$colorCodes, colorOfMusic$colorInformation$colorNames), main = "The 10 colors of the study")
@@ -97,22 +95,11 @@ pc <- ggplot() +
 pc
 ```
 
-
 ## Interactive CA
 
 ```{r interactive}
+dat.col$onclick <- sprintf('var audio= new Audio("https://github.com/vguillemot/colorofmusic/raw/main/music/%s.mp3"); audio.play();', c("videogame", "jazz", "country", "rap", "pop", "opera", "lowF", "highF", "middleF"))
 
-# dat.col$onclick <- sprintf('var audio= new Audio("https://lasonotheque.org/UPLOAD/mp3/187%i.mp3"); audio.play();', 1:9)
-
-dat.col$onclick <- 'var audio= new Audio("music/lowF.mp3"); audio.play();'
-dat.col$onclick <- 'var audio= new Audio("https://lasonotheque.org/UPLOAD/mp3/1871.mp3"); audio.play();'
-dat.col$onclick <- sprintf('var audio= new Audio("%s/1871.mp3"); audio.play();', getwd())
-
-dat.col$onclick <- "var audio= new Audio(\"/Users/vguillem/Library/CloudStorage/Box-Box/SPAFAC/fourbi/sCA_Saporta/1871.mp3\"); audio.play();"
-
-dat.col$onclick <- 'var audio= new Audio("https://localhost:4321/1871.mp3"); audio.play();'
-
-dat.col$onclick <- 'var audio= new Audio("<filepath>/1871.mp3"); audio.play();'
 
 pc.int <- ggplot() +
   geom_hline(yintercept = 0, color = "grey") +
@@ -133,4 +120,3 @@ girobj <- girafe(
 girobj
 
 ```
-
