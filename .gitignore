@@ -52,3 +52,4 @@ rsconnect/
 
 # Maqueries
 *.DS_Store
+*.html
