@@ -1,30 +1,30 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Correspondence analysis",
+    "title": "Colors of Music",
     "section": "",
-    "text": "ColorsTableHeatmapCAInteractive CA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nVideo\nJazz\nCountry\nRap\nPop\nOpera\nLow.F\nHigh.F\nMiddle.F\n\n\n\n\nred\n4\n2\n4\n4\n1\n2\n2\n4\n1\n\n\norange\n3\n4\n2\n2\n1\n1\n0\n3\n2\n\n\nyellow\n6\n4\n5\n2\n3\n1\n1\n3\n0\n\n\ngreen\n2\n0\n5\n1\n3\n3\n3\n1\n5\n\n\nblue\n2\n5\n0\n1\n4\n1\n2\n1\n3\n\n\npurple\n3\n3\n1\n0\n0\n3\n0\n2\n1\n\n\nwhite\n0\n0\n0\n0\n1\n4\n1\n5\n3\n\n\nblack\n0\n2\n0\n11\n1\n3\n10\n1\n1\n\n\npink\n2\n1\n1\n0\n2\n4\n0\n2\n0\n\n\nbrown\n0\n1\n4\n1\n6\n0\n3\n0\n6"
+    "text": "This is the companion website of the article “Correspondence Analysis”. The data of the “colors of music” experiment is shown below.\n\nColorsMusicTableHeatmap\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGenre\nExtract\nLink\n\n\n\n\nCountry\n  \nlink\n\n\nHigh F\n  \nlink\n\n\nJazz\n  \nlink\n\n\nLow F\n  \nlink\n\n\nMiddle F\n  \nlink\n\n\nOpera\n  \nlink\n\n\nPop\n  \nlink\n\n\nRap\n  \nlink\n\n\nVideo Game\n  \nlink\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nVideo\nJazz\nCountry\nRap\nPop\nOpera\nLow.F\nHigh.F\nMiddle.F\n\n\n\n\nred\n4\n2\n4\n4\n1\n2\n2\n4\n1\n\n\norange\n3\n4\n2\n2\n1\n1\n0\n3\n2\n\n\nyellow\n6\n4\n5\n2\n3\n1\n1\n3\n0\n\n\ngreen\n2\n0\n5\n1\n3\n3\n3\n1\n5\n\n\nblue\n2\n5\n0\n1\n4\n1\n2\n1\n3\n\n\npurple\n3\n3\n1\n0\n0\n3\n0\n2\n1\n\n\nwhite\n0\n0\n0\n0\n1\n4\n1\n5\n3\n\n\nblack\n0\n2\n0\n11\n1\n3\n10\n1\n1\n\n\npink\n2\n1\n1\n0\n2\n4\n0\n2\n0\n\n\nbrown\n0\n1\n4\n1\n6\n0\n3\n0\n6"
   },
   {
-    "objectID": "colorofmusic.html",
-    "href": "colorofmusic.html",
-    "title": "Correspondence analysis",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About us",
     "section": "",
-    "text": "Video\nJazz\nCountry\nRap\nPop\nOpera\nLow.F\nHigh.F\nMiddle.F\n\n\n\n\nred\n4\n2\n4\n4\n1\n2\n2\n4\n1\n\n\norange\n3\n4\n2\n2\n1\n1\n0\n3\n2\n\n\nyellow\n6\n4\n5\n2\n3\n1\n1\n3\n0\n\n\ngreen\n2\n0\n5\n1\n3\n3\n3\n1\n5\n\n\nblue\n2\n5\n0\n1\n4\n1\n2\n1\n3\n\n\npurple\n3\n3\n1\n0\n0\n3\n0\n2\n1\n\n\nwhite\n0\n0\n0\n0\n1\n4\n1\n5\n3\n\n\nblack\n0\n2\n0\n11\n1\n3\n10\n1\n1\n\n\npink\n2\n1\n1\n0\n2\n4\n0\n2\n0\n\n\nbrown\n0\n1\n4\n1\n6\n0\n3\n0\n6"
+    "text": "I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
   },
   {
-    "objectID": "colorofmusic.html#table",
-    "href": "colorofmusic.html#table",
-    "title": "Correspondence analysis",
+    "objectID": "about.html#vincent-guillemot",
+    "href": "about.html#vincent-guillemot",
+    "title": "About us",
     "section": "",
-    "text": "Video\nJazz\nCountry\nRap\nPop\nOpera\nLow.F\nHigh.F\nMiddle.F\n\n\n\n\nred\n4\n2\n4\n4\n1\n2\n2\n4\n1\n\n\norange\n3\n4\n2\n2\n1\n1\n0\n3\n2\n\n\nyellow\n6\n4\n5\n2\n3\n1\n1\n3\n0\n\n\ngreen\n2\n0\n5\n1\n3\n3\n3\n1\n5\n\n\nblue\n2\n5\n0\n1\n4\n1\n2\n1\n3\n\n\npurple\n3\n3\n1\n0\n0\n3\n0\n2\n1\n\n\nwhite\n0\n0\n0\n0\n1\n4\n1\n5\n3\n\n\nblack\n0\n2\n0\n11\n1\n3\n10\n1\n1\n\n\npink\n2\n1\n1\n0\n2\n4\n0\n2\n0\n\n\nbrown\n0\n1\n4\n1\n6\n0\n3\n0\n6"
+    "text": "I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
+  },
+  {
+    "objectID": "about.html#hervé-abdi",
+    "href": "about.html#hervé-abdi",
+    "title": "About us",
+    "section": "Hervé Abdi",
+    "text": "Hervé Abdi\n\n\n\n\n\n\n\n\n\nI am a Professor at the University of Texas at Dallas in the School of Behavioral and Brain Sciences. My recent work focuses on face and person perception, odor perception, and computational modeling of these processes. I have developed statistical techniques to analyze large data sets, such as those found in genomics, brain imaging, and sensory evaluation, including principal component analysis and multiple factor analysis."
   }
 ]
