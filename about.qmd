@@ -1,9 +1,33 @@
 ---
-title: "About"
+title: "About us"
 ---
 
-About this site
+## Vincent Guillemot
 
-```{r}
-1 + 1
-```
+:::: {layout="[ 70, 30 ]"}
+
+::: {#first-column}
+I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization.
+:::
+
+::: {#second-column}
+![](../img/vincentguillemot.jpeg)
+:::
+
+::::
+
+## Hervé Abdi
+
+:::: {layout="[ 30, 70 ]"}
+
+::: {#first-column}
+![](../img/herveabdi.jpeg)
+:::
+
+::: {#second-column}
+I am a Professor at the University of Texas at Dallas in the School of Behavioral and Brain Sciences. My recent work focuses on face and person perception, odor perception, and computational modeling of these processes. I have developed statistical techniques to analyze large data sets, such as those found in genomics, brain imaging, and sensory evaluation, including principal component analysis and multiple factor analysis.
+:::
+
+::::
+
+

@@ -1,15 +1,15 @@
 ---
-title: "Correspondence analysis"
-subtitle: "Colors of music"
+title: ""
 ---
 
-
+This is the companion website of the article "Correspondence Analysis". The data of the "colors of music" experiment is shown below.
 
 ```{r setup, include=FALSE}
 ## Dans ce chunk :
 # mettez vos options de chunk par défaut...  
 knitr::opts_chunk$set(echo = FALSE)
 # ... chargez toutes vos librairies
+library(dplyr)
 library(factoextra)
 library(FactoMineR)
 library(ggiraph)
@@ -19,9 +19,19 @@ library(ggrepel)
 library(pander)
 library(pheatmap)
 library(PMA)
-library(Polychrome)
 library(reshape2)
+library(scales)
 # R functions
+html_tag_audio <- function(file, type = c("wav")) {
+  type <- match.arg(type)
+  htmltools::tags$audio(
+    controls = "",
+    htmltools::tags$source(
+      src = file,
+      type = glue::glue("audio/{type}", type = type)
+    )
+  )
+}
 ```
 
 ::: {.panel-tabset}
@@ -34,8 +44,54 @@ tab <- colorOfMusic$contingencyTable
 ## Colors
 
 ```{r colors}
-swatch(setNames(colorOfMusic$colorInformation$colorCodes, colorOfMusic$colorInformation$colorNames), main = "The 10 colors of the study")
+colors <- setNames(
+  colorOfMusic$colorInformation$colorCodes,
+  colorOfMusic$colorInformation$colorNames)
+
+get_text_color <- function(bg_color) {
+  rgb <- col2rgb(bg_color) / 255
+  luminance <- 0.2126 * rgb[1] + 0.7152 * rgb[2] + 0.0722 * rgb[3]
+  if (luminance > 0.5) {
+    return("black")
+  } else {
+    return("white")
+  }
+}
+
+color_df <- tibble(
+  name = factor(names(colors), levels = names(colors)),
+  color = colors 
+)
+color_df$text_color <- sapply(color_df$color, get_text_color)
+
+color_df %>%
+ggplot(aes(
+  x = name, y = 1,
+  fill = I(color))) +
+  geom_col() +
+  coord_flip() +
+  geom_text(aes(label = name, y = 0.5, color = I(text_color)), hjust = 0.5) +
+  theme_void()
 ```
+
+## Music
+
+
+Genre | Extract | Link
+------|---------|------
+Country | `r html_tag_audio("music/country.mp3", type = "wav")`| link
+High F | `r html_tag_audio("music/highF.mp3", type = "wav")`| link
+Jazz | `r html_tag_audio("music/jazz.mp3", type = "wav")`| link
+Low F | `r html_tag_audio("music/lowF.mp3", type = "wav")`| link
+Middle F | `r html_tag_audio("music/middleF.mp3", type = "wav")`| link
+Opera | `r html_tag_audio("music/opera.mp3", type = "wav")`| link
+Pop | `r html_tag_audio("music/pop.mp3", type = "wav")`| link
+Rap | `r html_tag_audio("music/rap.mp3", type = "wav")`| link
+Video Game | `r html_tag_audio("music/videogame.mp3", type = "wav")`| link
+
+
+
+
 
 ## Table
 
@@ -68,68 +124,5 @@ pheatmap(tab,
          border_color = NA)
 ```
 
-## CA
-
-```{r ca_graphs}
-res.ca <- CA(tab, graph = FALSE)
-
-dat.row <- data.frame(
-  res.ca$row$coord,
-  colorOfMusic$colorInformation)
-
-dat.col <- data.frame(
-  res.ca$col$coord, 
-  musics = rownames(res.ca$col$coord))
-
-pc <- ggplot() +
-  geom_hline(yintercept = 0, color = "grey") +
-  geom_vline(xintercept = 0, color = "grey") +
-  geom_label(aes(Dim.1, Dim.2, color = I(colorCodes), label = colorNames),
-             dat.row, size = 2, fontface = 2) +
-  geom_point(aes(Dim.1, Dim.2), dat.col, shape = "♪", size = 4) +
-  geom_text_repel(aes(Dim.1, Dim.2, label = musics), dat.col, fontface = 3) +
-  theme_bw() +
-  labs(x = "Dim. 1 (38.6%)",
-       y = "Dim. 2 (25.9%)",
-       title = "CA factor map")
-
-pc
-```
-
-## Interactive CA
-
-```{r interactive}
-
-# dat.col$onclick <- sprintf('var audio= new Audio("https://lasonotheque.org/UPLOAD/mp3/187%i.mp3"); audio.play();', 1:9)
-
-dat.col$onclick <- 'var audio= new Audio("music/lowF.mp3"); audio.play();'
-dat.col$onclick <- 'var audio= new Audio("https://lasonotheque.org/UPLOAD/mp3/1871.mp3"); audio.play();'
-dat.col$onclick <- sprintf('var audio= new Audio("%s/1871.mp3"); audio.play();', getwd())
-
-dat.col$onclick <- "var audio= new Audio(\"/Users/vguillem/Library/CloudStorage/Box-Box/SPAFAC/fourbi/sCA_Saporta/1871.mp3\"); audio.play();"
-
-dat.col$onclick <- 'var audio= new Audio("https://localhost:4321/1871.mp3"); audio.play();'
-
-dat.col$onclick <- 'var audio= new Audio("<filepath>/1871.mp3"); audio.play();'
-
-pc.int <- ggplot() +
-  geom_hline(yintercept = 0, color = "grey") +
-  geom_vline(xintercept = 0, color = "grey") +
-  geom_label(aes(Dim.1, Dim.2, color = I(colorCodes), label = colorNames),
-             dat.row, size = 2, fontface = 2) +
-  geom_point_interactive(aes(Dim.1, Dim.2, onclick = onclick), dat.col, shape = "♪", size = 4) +
-  geom_text_repel(aes(Dim.1, Dim.2, label = musics), dat.col, fontface = 3) +
-  theme_bw() +
-  labs(x = "Dim. 1 (38.6%)",
-       y = "Dim. 2 (25.9%)",
-       title = "CA factor map")
-
-
-girobj <- girafe(
-  ggobj = pc.int)
-
-girobj
-
-```
 
 :::

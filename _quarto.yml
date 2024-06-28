@@ -3,14 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "colorofmusic"
+  title: "Colors of Music"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
       - href: ca.html
-        text: Interactive CA
-      - about.qmd
+        text: Correspondence Analysis Factor Map
+      - href: about.qmd
+        text: About us
+      - icon: github
+        href: https://github.com/vguillemot/colorofmusic
 
 format:
   html:

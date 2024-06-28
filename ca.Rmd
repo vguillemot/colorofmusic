@@ -1,6 +1,6 @@
 ---
-title: "Correspondence analysis"
-subtitle: "Colors of music"
+title: ""
+subtitle: ""
 output: html_document
 ---
 
@@ -23,7 +23,6 @@ library(reshape2)
 # R functions
 ```
 
-#  {.tabset}
 
 ```{r data}
 data("colorOfMusic", package = "data4PCCAR")
@@ -49,7 +48,7 @@ pc.int <- ggplot() +
   geom_hline(yintercept = 0, color = "grey") +
   geom_vline(xintercept = 0, color = "grey") +
   geom_label(aes(Dim.1, Dim.2, color = I(colorCodes), label = colorNames),
-             dat.row, size = 2, fontface = 2) +
+             dat.row, size = 4, fontface = 2) +
   geom_point_interactive(aes(Dim.1, Dim.2, onclick = onclick), dat.col, shape = "♪", size = 4) +
   geom_text_repel(aes(Dim.1, Dim.2, label = musics), dat.col, fontface = 3) +
   theme_bw() +
