@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  google-analytics: G-FJF9QG31QF
   title: "Colors of Music"
   navbar:
     left:
