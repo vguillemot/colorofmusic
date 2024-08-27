@@ -23,12 +23,10 @@ library(reshape2)
 # R functions
 ```
 
-
 ```{r data}
 data("colorOfMusic", package = "data4PCCAR")
 tab <- colorOfMusic$contingencyTable
 ```
-
 
 ```{r interactive}
 res.ca <- CA(tab, graph = FALSE)

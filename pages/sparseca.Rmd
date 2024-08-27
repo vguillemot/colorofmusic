@@ -1,0 +1,74 @@
+---
+title: ""
+subtitle: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+## Dans ce chunk :
+# mettez vos options de chunk par défaut...  
+knitr::opts_chunk$set(echo = FALSE)
+# ... chargez toutes vos librairies
+library(factoextra)
+library(FactoMineR)
+library(ggiraph)
+library(ggplot2)
+library(ggpubr)
+library(ggrepel)
+library(pander)
+library(pheatmap)
+library(PMA)
+library(Polychrome)
+library(reshape2)
+library(SPAFAC)
+library(sGSVD)
+# R functions
+```
+
+```{r data}
+data("colorOfMusic", package = "data4PCCAR")
+tab <- colorOfMusic$contingencyTable
+```
+
+```{r interactive}
+I <- nrow(tab)
+J <- ncol(tab)
+res.sca <- sparseCA(
+  DATA = tab,
+  components = 2L,
+  rdsLeft = sqrt(I) * c(0.35, 0.35),
+  rdsRight = sqrt(J) * c(0.35, 0.35))
+
+dat.row <- data.frame(
+  res.sca$fi,
+  colorOfMusic$colorInformation) %>%
+  dplyr::filter(X1 != 0 | X2 != 0)
+
+dat.col <- data.frame(
+  res.sca$fj, 
+  musics = rownames(res.sca$fj),
+  onclick = sprintf('var audio= new Audio("https://github.com/vguillemot/colorofmusic/raw/main/music/%s.mp3"); audio.play();', c("videogame", "jazz", "country", "rap", "pop", "opera", "lowF", "highF", "middleF"))) %>%
+  dplyr::filter(X1 != 0 | X2 != 0)
+
+# dat.col$onclick <- sprintf('var audio= new Audio("https://github.com/vguillemot/colorofmusic/raw/main/music/%s.mp3"); audio.play();', c("videogame", "jazz", "country", "rap", "pop", "opera", "lowF", "highF", "middleF"))
+
+
+pc.int <- ggplot() +
+  geom_hline(yintercept = 0, color = "grey") +
+  geom_vline(xintercept = 0, color = "grey") +
+  geom_label(aes(X1, X2, color = I(colorCodes), label = colorNames),
+             dat.row, size = 4, fontface = 2) +
+  geom_point_interactive(aes(X1, X2, onclick = onclick), dat.col, shape = "♪", size = 4) +
+  geom_text_repel(aes(X1, X2, label = musics), dat.col, fontface = 3) +
+  theme_bw() +
+  labs(x = "Dim. 1 (38.6%)",
+       y = "Dim. 2 (25.9%)",
+       title = "CA factor map")
+
+
+girobj <- girafe(
+  ggobj = pc.int)
+
+girobj
+
+```

@@ -7,9 +7,11 @@ website:
   title: "Colors of Music"
   navbar:
     left:
-      - href: ca.html
-        text: Correspondence Analysis Factor Map
-      - href: about.qmd
+      - href: pages/ca.html
+        text: Correspondence Analysis
+      - href: pages/sparseca.html
+        text: Sparse Correspondence Analysis
+      - href: pages/about.qmd
         text: About us
       - icon: github
         href: https://github.com/vguillemot/colorofmusic
