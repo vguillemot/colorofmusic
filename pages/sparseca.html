@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Colors of Music -</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FJF9QG31QF"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FJF9QG31QF', { 'anonymize_ip': true});
+</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../site_libs/d3-bundle-5.16.0/d3-bundle.min.js"></script>
+<script src="../site_libs/d3-lasso-0.0.5/d3-lasso.min.js"></script>
+<script src="../site_libs/save-svg-as-png-1.4.17/save-svg-as-png.min.js"></script>
+<script src="../site_libs/flatbush-4.4.0/flatbush.min.js"></script>
+<link href="../site_libs/ggiraphjs-0.8.10/ggiraphjs.min.css" rel="stylesheet">
+<script src="../site_libs/ggiraphjs-0.8.10/ggiraphjs.min.js"></script>
+<script src="../site_libs/girafe-binding-0.8.10/girafe.js"></script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Colors of Music</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/ca.html"> 
+<span class="menu-text">Correspondence Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../pages/sparseca.html" aria-current="page"> 
+<span class="menu-text">Sparse Correspondence Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/about.html"> 
+<span class="menu-text">About us</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/vguillemot/colorofmusic"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item" id="htmlwidget-042a768cc87973473223" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-042a768cc87973473223">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf' viewBox='0 0 504 360'>\n <defs id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_defs'>\n  <clipPath id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_c1'>\n   <rect x='0' y='0' width='504' height='360'/>\n  <\/clipPath>\n  <clipPath id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_c2'>\n   <rect x='38.64' y='23.34' width='459.88' height='304.93'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_da284fad_19e3_4fe0_8d23_31925f788ccf_c1)'>\n   <rect x='0' y='0' width='504' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='504' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_da284fad_19e3_4fe0_8d23_31925f788ccf_c2)'>\n   <rect x='38.64' y='23.34' width='459.88' height='304.93' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='38.64,278.44 498.52,278.44' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.64,192.43 498.52,192.43' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.64,106.42 498.52,106.42' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='130.81,328.27 130.81,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='231.08,328.27 231.08,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='331.36,328.27 331.36,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='431.63,328.27 431.63,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.64,321.44 498.52,321.44' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.64,235.43 498.52,235.43' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.64,149.42 498.52,149.42' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.64,63.41 498.52,63.41' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='80.67,328.27 80.67,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='180.94,328.27 180.94,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='281.22,328.27 281.22,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='381.49,328.27 381.49,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='481.77,328.27 481.77,23.34' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='38.64' y1='63.41' x2='498.52' y2='63.41' stroke='#BEBEBE' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='80.67' y1='328.27' x2='80.67' y2='23.34' stroke='#BEBEBE' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polygon points='61.92,44.70 99.42,44.70 99.34,44.70 99.67,44.69 99.99,44.62 100.30,44.51 100.59,44.34 100.84,44.13 101.06,43.89 101.24,43.61 101.37,43.30 101.45,42.98 101.47,42.66 101.47,42.66 101.47,31.74 101.47,31.74 101.45,31.41 101.37,31.09 101.24,30.79 101.06,30.51 100.84,30.26 100.59,30.05 100.30,29.89 99.99,29.77 99.67,29.70 99.42,29.69 61.92,29.69 62.16,29.70 61.83,29.69 61.51,29.73 61.19,29.82 60.89,29.96 60.62,30.15 60.38,30.38 60.19,30.64 60.03,30.93 59.93,31.25 59.88,31.57 59.87,31.74 59.87,42.66 59.88,42.49 59.88,42.82 59.93,43.15 60.03,43.46 60.19,43.75 60.38,44.01 60.62,44.24 60.89,44.43 61.19,44.57 61.51,44.66 61.83,44.70' fill='#FFFFFF' fill-opacity='1' stroke='#FFED6F' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='63.28' y='41.29' font-size='8.54pt' font-weight='bold' font-family='Helvetica' fill='#FFED6F' fill-opacity='1'>yellow<\/text>\n   <polygon points='40.98,70.92 78.48,70.92 78.39,70.92 78.72,70.90 79.05,70.84 79.36,70.72 79.64,70.56 79.90,70.35 80.12,70.10 80.29,69.82 80.42,69.52 80.50,69.20 80.53,68.87 80.53,68.87 80.53,57.95 80.53,57.95 80.50,57.62 80.42,57.30 80.29,57.00 80.12,56.72 79.90,56.48 79.64,56.27 79.36,56.10 79.05,55.99 78.72,55.92 78.48,55.90 40.98,55.90 41.23,55.92 40.90,55.91 40.57,55.95 40.26,56.04 39.96,56.18 39.69,56.37 39.45,56.59 39.25,56.86 39.10,57.15 39.00,57.46 38.94,57.79 38.94,57.95 38.94,68.87 38.94,68.71 38.94,69.04 39.00,69.36 39.10,69.67 39.25,69.97 39.45,70.23 39.69,70.46 39.96,70.64 40.26,70.79 40.57,70.88 40.90,70.92' fill='#FFFFFF' fill-opacity='1' stroke='#54278F' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='42.35' y='67.5' font-size='8.54pt' font-weight='bold' font-family='Helvetica' fill='#54278F' fill-opacity='1'>purple<\/text>\n   <polygon points='43.64,70.92 75.44,70.92 75.36,70.92 75.69,70.90 76.01,70.84 76.32,70.72 76.61,70.56 76.86,70.35 77.08,70.10 77.26,69.82 77.39,69.52 77.47,69.20 77.49,68.87 77.49,68.87 77.49,57.95 77.49,57.95 77.47,57.62 77.39,57.30 77.26,57.00 77.08,56.72 76.86,56.48 76.61,56.27 76.32,56.10 76.01,55.99 75.69,55.92 75.44,55.90 43.64,55.90 43.89,55.92 43.56,55.91 43.23,55.95 42.91,56.04 42.62,56.18 42.34,56.37 42.11,56.59 41.91,56.86 41.76,57.15 41.65,57.46 41.60,57.79 41.59,57.95 41.59,68.87 41.60,68.71 41.60,69.04 41.65,69.36 41.76,69.67 41.91,69.97 42.11,70.23 42.34,70.46 42.62,70.64 42.91,70.79 43.23,70.88 43.56,70.92' fill='#FFFFFF' fill-opacity='1' stroke='#E6E6FA' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='45.01' y='67.5' font-size='8.54pt' font-weight='bold' font-family='Helvetica' fill='#E6E6FA' fill-opacity='1'>white<\/text>\n   <polygon points='410.24,70.92 442.06,70.92 441.98,70.92 442.31,70.90 442.63,70.84 442.94,70.72 443.23,70.56 443.48,70.35 443.70,70.10 443.88,69.82 444.01,69.52 444.09,69.20 444.11,68.87 444.11,68.87 444.11,57.95 444.11,57.95 444.09,57.62 444.01,57.30 443.88,57.00 443.70,56.72 443.48,56.48 443.23,56.27 442.94,56.10 442.63,55.99 442.31,55.92 442.06,55.90 410.24,55.90 410.48,55.92 410.15,55.91 409.83,55.95 409.51,56.04 409.21,56.18 408.94,56.37 408.70,56.59 408.51,56.86 408.35,57.15 408.25,57.46 408.19,57.79 408.19,57.95 408.19,68.87 408.19,68.71 408.19,69.04 408.25,69.36 408.35,69.67 408.51,69.97 408.70,70.23 408.94,70.46 409.21,70.64 409.51,70.79 409.83,70.88 410.15,70.92' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='411.6' y='67.5' font-size='8.54pt' font-weight='bold' font-family='Helvetica'>black<\/text>\n   <polygon points='53.64,70.92 79.76,70.92 79.68,70.92 80.01,70.90 80.33,70.84 80.64,70.72 80.93,70.56 81.18,70.35 81.40,70.10 81.58,69.82 81.71,69.52 81.78,69.20 81.81,68.87 81.81,68.87 81.81,57.95 81.81,57.95 81.78,57.62 81.71,57.30 81.58,57.00 81.40,56.72 81.18,56.48 80.93,56.27 80.64,56.10 80.33,55.99 80.01,55.92 79.76,55.90 53.64,55.90 53.89,55.92 53.56,55.91 53.24,55.95 52.92,56.04 52.62,56.18 52.35,56.37 52.11,56.59 51.91,56.86 51.76,57.15 51.66,57.46 51.60,57.79 51.60,57.95 51.60,68.87 51.60,68.71 51.60,69.04 51.66,69.36 51.76,69.67 51.91,69.97 52.11,70.23 52.35,70.46 52.62,70.64 52.92,70.79 53.24,70.88 53.56,70.92' fill='#FFFFFF' fill-opacity='1' stroke='#FCCDE5' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='55.01' y='67.5' font-size='8.54pt' font-weight='bold' font-family='Helvetica' fill='#FCCDE5' fill-opacity='1'>pink<\/text>\n   <polygon points='62.24,321.91 99.10,321.91 99.01,321.91 99.34,321.90 99.67,321.83 99.98,321.72 100.26,321.55 100.52,321.34 100.73,321.10 100.91,320.82 101.04,320.51 101.12,320.19 101.15,319.86 101.15,319.86 101.15,308.95 101.15,308.95 101.12,308.62 101.04,308.30 100.91,307.99 100.73,307.72 100.52,307.47 100.26,307.26 99.98,307.10 99.67,306.98 99.34,306.91 99.10,306.90 62.24,306.90 62.49,306.91 62.16,306.90 61.83,306.94 61.52,307.03 61.22,307.17 60.95,307.36 60.71,307.59 60.51,307.85 60.36,308.14 60.26,308.46 60.20,308.78 60.20,308.95 60.20,319.86 60.20,319.70 60.20,320.03 60.26,320.35 60.36,320.67 60.51,320.96 60.71,321.22 60.95,321.45 61.22,321.64 61.52,321.78 61.83,321.87 62.16,321.91' fill='#FFFFFF' fill-opacity='1' stroke='#A65628' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='63.61' y='318.5' font-size='8.54pt' font-weight='bold' font-family='Helvetica' fill='#A65628' fill-opacity='1'>brown<\/text>\n   <text id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_e1' x='474.53' y='67.88' font-size='9.24pt' font-family='Helvetica' onclick='var audio= new Audio(\"https://github.com/vguillemot/colorofmusic/raw/main/music/rap.mp3\"); audio.play();'>♪<\/text>\n   <text id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_e2' x='77.58' y='80.55' font-size='9.24pt' font-family='Helvetica' onclick='var audio= new Audio(\"https://github.com/vguillemot/colorofmusic/raw/main/music/pop.mp3\"); audio.play();'>♪<\/text>\n   <text id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_e3' x='97.98' y='67.88' font-size='9.24pt' font-family='Helvetica' onclick='var audio= new Audio(\"https://github.com/vguillemot/colorofmusic/raw/main/music/lowF.mp3\"); audio.play();'>♪<\/text>\n   <text id='svg_da284fad_19e3_4fe0_8d23_31925f788ccf_e4' x='77.58' y='314.36' font-size='9.24pt' font-family='Helvetica' onclick='var audio= new Audio(\"https://github.com/vguillemot/colorofmusic/raw/main/music/middleF.mp3\"); audio.play();'>♪<\/text>\n   <text x='454.8' y='75.78' font-size='8.28pt' font-style='italic' font-family='Helvetica'>Rap<\/text>\n   <text x='58.1' y='88.52' font-size='8.28pt' font-style='italic' font-family='Helvetica'>Pop<\/text>\n   <text x='98.85' y='58.87' font-size='8.28pt' font-style='italic' font-family='Helvetica'>Low.F<\/text>\n   <text x='72.24' y='305.4' font-size='8.28pt' font-style='italic' font-family='Helvetica'>Middle.F<\/text>\n   <rect x='38.64' y='23.34' width='459.88' height='304.93' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_da284fad_19e3_4fe0_8d23_31925f788ccf_c1)'>\n   <text x='18.54' y='324.59' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>-0.6<\/text>\n   <text x='18.54' y='238.58' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>-0.4<\/text>\n   <text x='18.54' y='152.57' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>-0.2<\/text>\n   <text x='21.47' y='66.57' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>0.0<\/text>\n   <polyline points='35.90,321.44 38.64,321.44' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.90,235.43 38.64,235.43' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.90,149.42 38.64,149.42' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.90,63.41 38.64,63.41' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='80.67,331.01 80.67,328.27' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='180.94,331.01 180.94,328.27' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='281.22,331.01 281.22,328.27' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='381.49,331.01 381.49,328.27' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='481.77,331.01 481.77,328.27' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='72.11' y='339.5' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>0.00<\/text>\n   <text x='172.38' y='339.5' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>0.25<\/text>\n   <text x='272.65' y='339.5' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>0.50<\/text>\n   <text x='372.93' y='339.5' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>0.75<\/text>\n   <text x='473.2' y='339.5' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D' fill-opacity='1'>1.00<\/text>\n   <text x='231.91' y='352.09' font-size='8.25pt' font-family='Helvetica'>Dim. 1 (38.6%)<\/text>\n   <text transform='translate(13.37,212.47) rotate(-90.00)' font-size='8.25pt' font-family='Helvetica'>Dim. 2 (25.9%)<\/text>\n   <text x='38.64' y='14.94' font-size='9.9pt' font-family='Helvetica'>CA factor map<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_da284fad_19e3_4fe0_8d23_31925f788ccf","ratio":1.4,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"fixed":false,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/vguillemot\.github\.io\/colorofmusic\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
